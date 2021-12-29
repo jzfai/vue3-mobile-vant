@@ -1,0 +1,22 @@
+<template>
+  <div class="mockTest">
+    <div>mock 使用示例(dev环境时使用)</div>
+    <van-button @click="listReq" type="primary">点击发送mock请求</van-button>
+  </div>
+</template>
+
+<script setup>
+// mock address https://blog.csdn.net/weixin_42067720/article/details/115579817
+// import '@/mock/index.js'
+import axios from 'axios'
+const listReq = () => {
+  axios.get('/getMapInfo').then((res) => {
+    if (res.data) {
+      console.log(res.data)
+      alert(res.data.title)
+    }
+  })
+}
+</script>
+
+<style scoped lang="scss"></style>
