@@ -1,3 +1,4 @@
+// https://blog.csdn.net/Sheng_zhenzhen/article/details/108685176
 module.exports = {
   root: true,
   env: {
@@ -16,7 +17,7 @@ module.exports = {
     defineProps: true,
     defineExpose: true
   },
-  plugins: ['typescript-eslint', 'prettier', 'import'],
+  plugins: ['@typescript-eslint', 'prettier', 'import'],
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:vue/vue3-recommended', 'prettier'],
   parserOptions: {
     parser: '@typescript-eslint/parser',

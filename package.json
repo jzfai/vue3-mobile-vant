@@ -8,7 +8,7 @@
     "test": "vite --mode serve-test --host",
     "build:test": "vite build --mode  build-test",
     "build": "vite build --mode build",
-    "preview": "yarn run build && vite preview ",
+    "preview": "npm run build && vite preview ",
     "lint": "eslint --ext .js,.jsx,.vue,.ts,.tsx src --fix",
     "prepare": "husky install"
   },
@@ -31,6 +31,7 @@
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "8.1.1",
+    "typescript": "4.3.2",
     "husky": "7.0.2",
     "prettier": "2.2.1",
     "amfe-flexible": "2.2.1",

@@ -2,8 +2,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  //setting default size is 12px
-  font-size: $defaultSize;
+  //setting default size is 20px
+  font-size: $defaultSize!important;
 }
 * {
   box-sizing: border-box;
