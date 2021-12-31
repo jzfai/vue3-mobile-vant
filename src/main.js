@@ -12,7 +12,6 @@ app.use(Vant)
 //part import by you need
 // import vantUtils from '@/utils/vantUtils'
 // app.use(vantUtils)
-
 //import router
 app.use(router)
 import router from './router'

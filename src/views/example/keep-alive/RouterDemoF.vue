@@ -14,13 +14,9 @@
   </div>
 </template>
 <script setup>
-import { onMounted } from 'vue'
 import useRouter from '@/hooks/useRouter'
-
-onMounted(() => {
-  //get page pass url data
-  console.log(useRouter.queryParamsMixin)
-})
+import useCommon from '@/hooks/useCommon'
+console.log(useCommon.state.todayTimeMixin)
 const routerDemoS = () => {
   useRouter.routerPushMixin('routerDemoS', { name: 'routerDemoS' })
 }

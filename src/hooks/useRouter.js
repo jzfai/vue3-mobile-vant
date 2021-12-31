@@ -1,14 +1,13 @@
-import { reactive } from 'vue'
+import { reactive, toRefs } from 'vue'
 import router from '@/router'
 let hooksFunc = function () {
   const route = router.currentRoute
-  let state = reactive({
-    queryParamsMixin: null
-  })
-  if (route?.query?.params) {
-    state.queryParamsMixin = JSON.parse(route.query.params)
+  const getQueryParam = () => {
+    if (route.value.query.params) {
+      return JSON.parse(route.value.query.params)
+    }
   }
-  // vue router跳转
+  // vue router
   const routerPushMixin = (name, params) => {
     let data = {}
     if (params) {
@@ -40,12 +39,13 @@ let hooksFunc = function () {
   const routerBackMixin = () => {
     router.go(-1)
   }
-
   return {
     routerPushMixin,
     routerReplaceMixin,
     routerBackMixin,
-    ...state
+    getQueryParam
   }
 }
+
+// hooksFunc() not direct use the  mounted , but hooksFunc can use
 export default hooksFunc()

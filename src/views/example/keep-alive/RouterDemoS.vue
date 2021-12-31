@@ -13,10 +13,10 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import useRouter from '@/hooks/useRouter'
-onMounted(() => {
-  console.log(useRouter.queryParamsMixin)
-})
+import { getQueryParam } from '@/hooks/useRouter'
+let { rou } = useRouter
+
+console.log(useRouter.getQueryParam())
 </script>
 
 <style scoped lang="scss"></style>
