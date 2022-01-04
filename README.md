@@ -36,14 +36,12 @@ github 地址：  https://github.com/jzfai/vue3-mobile-vant.git
 
 ![template-speed-analysis](http://8.135.1.141/file/images/mobile-speed-analysis.png)
 
-![template-demo](http://8.135.1.141/file/images/mobile-demo.png)
-
 ## Related items
 
 The framework is available in js, ts versions
 - js version：[vue3-mobile-vant](https://github.com/jzfai/vue3-mobile-vant.git)
 - ts version：[vue3-mobile-vant-ts](https://github.com/jzfai/vue3-admin-vant-ts.git)
-- js version for plus：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
+- js version for pc admin：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
 - java Micro-service background data：[micro-service-plus](https://github.com/jzfai/micro-service-plus)
 > development and  experience：two words  Really fragrant！！！！！
 

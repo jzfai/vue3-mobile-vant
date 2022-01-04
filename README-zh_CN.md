@@ -41,14 +41,12 @@ github 地址：  https://github.com/jzfai/vue3-mobile-vant.git
 
 ![template-speed-analysis](http://8.135.1.141/file/images/vant-speed-analysis.png)
 
-![template-demo](http://8.135.1.141/file/images/mobile-demo.png)
-
 ## 相关项目
 
 框架有js，ts版本
 - js version：[vue3-mobile-vant](https://github.com/jzfai/vue3-mobile-vant.git)
 - ts version：[vue3-mobile-vant-ts](https://github.com/jzfai/vue3-admin-vant-ts.git)
-- js version for plus：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
+- js version for pc admin：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
 - java微服务后台数据：[micro-service-plus](https://github.com/jzfai/micro-service-plus)
 
 > 开发和使用感受：两个字 真香！！！！！
@@ -72,7 +70,6 @@ pnpm run dev
 ```
 
 浏览器访问 http://localhost:5006
-
 
 ## 发布
 
