@@ -14,7 +14,6 @@
 <script setup>
 import { onMounted } from 'vue'
 import useRouter from '@/hooks/useRouter'
-let { rou } = useRouter
 
 console.log(useRouter.getQueryParam())
 </script>

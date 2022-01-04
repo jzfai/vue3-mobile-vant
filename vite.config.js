@@ -116,5 +116,8 @@ export default ({ command, mode }) => {
         }
       }
     }
+    // optimizeDeps: {
+    //   include: ['vant/lib/index.css']
+    // }
   }
 }

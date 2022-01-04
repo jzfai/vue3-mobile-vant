@@ -4,14 +4,14 @@
 
 
 
-> 这是一个基础的 vue3 admin 管理后台。它只包含了 Element-Plus UI & axios & svg-icon& permission control & lint，这些搭建后台必要的东西。
+> vue3 mobile vant 提供企业级的移动端开发架构
 
 
-本架构使用的技术为：vue3(setup-script)+vite2+element-plus 的新一代的前端框架，It's fast!
+本架构使用的技术为：vue3(setup-script)+vite2+vant3 的新一代的前端框架，It's fast!
 
 使用 eslint+prettier+gitHooks 格式和校验代码,提高代码规范性和开发效率
 
-Vite 需要 Node.js 版本 >= 12.0.0。
+> rem适配规则，vant根据 375，而开发时使用的是750，详情请查看"postcss.config.js"配置文件
 
 ## 更新日志
 
@@ -39,38 +39,19 @@ github 地址：  https://github.com/jzfai/vue3-mobile-vant.git
 
  ---- 我们先看看加载速度和构建后的包大小：
 
-![template-speed-analysis](http://8.135.1.141/file/images/template-speed-analysis.png)
+![template-speed-analysis](http://8.135.1.141/file/images/vant-speed-analysis.png)
 
-![template-demo](http://8.135.1.141/file/images/template-demo.png)
+![template-demo](http://8.135.1.141/file/images/mobile-demo.png)
 
 ## 相关项目
 
-框架有js，ts，plus和electron版本
-
-- js版本：[vue3-element-admin](https://github.com/jzfai/vue3-mobile-vant.git)
-- ts版本：[vue3-element-ts](https://github.com/jzfai/vue3-admin-ts.git)
-- js实例参考plus版本：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
-- electron版本：[vue3-element-electron](https://github.com/jzfai/vue3-admin-electron.git)
-- react版本： [react-admin-template](https://github.com/jzfai/react-admin-template.git)
+框架有js，ts版本
+- js version：[vue3-mobile-vant](https://github.com/jzfai/vue3-mobile-vant.git)
+- ts version：[vue3-mobile-vant-ts](https://github.com/jzfai/vue3-admin-vant-ts.git)
+- js version for plus：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
 - java微服务后台数据：[micro-service-plus](https://github.com/jzfai/micro-service-plus)
 
 > 开发和使用感受：两个字 真香！！！！！
-
-
-
-vue3和vue2在性能上的对比
-
-- 打包大小减少41%
-
-- 初次渲染快55%, 更新渲染快133%
-
-- 内存减少54%
-
-- **使用Proxy代替defineProperty实现数据响应式**
-
-- **重写虚拟DOM的实现和Tree-Shaking**
-
-[vite2和webpack打包速度上的对比](https://github.com/jzfai/vue3-mobile-vant/issues/2)
 
 ## 构建步骤
 
@@ -116,76 +97,6 @@ pnpm run preview
 pnpm run lint
 ```
 
-## 功能
-
-```
-- 登录 / 注销
-
-- 权限验证
-  - 页面权限
-  - 指令权限
-  - 权限配置
-  - 二步登录
-
-- 多环境发布
-  - serve
-  - build
-  - priview
-  - lint
-
-- 全局功能
-  #- 国际化多语言
-  #- 多种动态换肤
-  - 动态侧边栏（支持多级路由嵌套）
-  - 动态面包屑
-  - 快捷导航(标签页)
-  - Svg Sprite 图标
-  - 本地/后端 mock 数据
-  #- Screenfull全屏
-  - 自适应收缩侧边栏
-
-- 编辑器
-  - 富文本
-  - Markdown
-  #- JSON 等多格式
-
-#- Excel
-  #- 导出excel
-  #- 导入excel
-  #- 前端可视化excel
-  #- 导出zip
-
-- 表格
-  - 动态表格
-  #- 拖拽表格
-  #- 内联编辑
-
-- 错误页面
-  - 401
-  - 404
-
-- 組件
-  - 头像上传
-  - 返回顶部
-  #- 拖拽Dialog
-  #- 拖拽Select
-  #- 拖拽看板
-  #- 列表拖拽
-  #- SplitPane
-  #- Dropzone
-  #- Sticky
-  #- CountTo
-
-- 综合实例
-- 错误日志
-- Dashboard
-#- 引导页
-- ECharts 图表
-#- Clipboard(剪贴复制)
-#- Markdown2html
-```
-
->注：#---暂未实现(希望大家能一起开发)
 
 ## 额外
 

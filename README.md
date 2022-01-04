@@ -2,13 +2,13 @@
 
 **English** | [中文](./README-zh_CN.md)
 
-> vue3 admin plus provides enterprise-level development demo
+> vue3 mobile vant  provides enterprise-level mobile development demo
 
-A new  generation admin  construct   using  vue3(setup-script)+vite2+vant3.x ，It's fast!
+A new  generation  mobile  construct   using  vue3(setup-script)+vite2+vant3 ，It's easy and  fast!
 
 Use eslint+prettier+gitHooks format and verification code to improve code standardization and development efficiency
 
-
+>the rem flexible,  vant  ui according to 375, but developing is 750 , detail to look the "postcss.config.js"
 
 ## Update log
 
@@ -34,37 +34,19 @@ github 地址：  https://github.com/jzfai/vue3-mobile-vant.git
 
 ---- Let's look at the loading speed and the size of the built package first.：
 
-![template-speed-analysis](http://8.135.1.141/file/images/template-speed-analysis.png)
+![template-speed-analysis](http://8.135.1.141/file/images/mobile-speed-analysis.png)
 
-![template-demo](http://8.135.1.141/file/images/plus-demo.png)
+![template-demo](http://8.135.1.141/file/images/mobile-demo.png)
 
 ## Related items
 
-The framework is available in js, ts , plus and electron versions
-- js version：[vue3-element-admin](https://github.com/jzfai/vue3-mobile-vant.git)
-- ts version：[vue3-element-ts](https://github.com/jzfai/vue3-admin-ts.git)
+The framework is available in js, ts versions
+- js version：[vue3-mobile-vant](https://github.com/jzfai/vue3-mobile-vant.git)
+- ts version：[vue3-mobile-vant-ts](https://github.com/jzfai/vue3-admin-vant-ts.git)
 - js version for plus：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
-- js version for electron：[vue3-element-electron](https://github.com/jzfai/vue3-admin-electron.git)
-- react version： [react-admin-template](https://github.com/jzfai/react-admin-template.git)
 - java Micro-service background data：[micro-service-plus](https://github.com/jzfai/micro-service-plus)
 > development and  experience：two words  Really fragrant！！！！！
 
-
-
-#### Comparison of performance between vue3 and vue2
-
-- 41% reduction in package size
-
-- The initial rendering is 55% faster, the update rendering is 133% faster
-
-- Memory reduction 54%
-
-- **Use Proxy instead of defineProperty to implement data responsiveness**
-
-- **Rewrite the implementation of virtual DOM and Tree-Shaking**
-
-
-[Comparison of packaging speed between vite2 and webpack](https://github.com/jzfai/vue3-mobile-vant/issues/2)
 
 ## Build Setup
 

@@ -1,11 +1,6 @@
 const setting = {
   /**
    * @type {boolean} true | false
-   * @description Whether need nprogress
-   */
-  isNeedNprogress: true,
-  /**
-   * @type {boolean} true | false
    * @description Whether  open prod mock
    */
   openProdMock: true,

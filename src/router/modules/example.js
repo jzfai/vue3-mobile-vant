@@ -1,6 +1,12 @@
 /** When your routing table is too long, you can split it into small modules**/
 const exampleRouter = [
   {
+    path: '/example',
+    component: () => import('@/views/example'),
+    name: 'Example',
+    meta: { title: 'Example' }
+  },
+  {
     path: '/hook',
     component: () => import('@/views/example/hook/Hook.vue'),
     name: 'Hook',
