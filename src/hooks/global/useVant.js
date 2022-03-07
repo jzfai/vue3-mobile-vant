@@ -1,13 +1,14 @@
 import { Toast, Dialog } from 'vant'
 import { ref } from 'vue'
-let hooksFunc = function () {
+import useVueRouterExample from '@/hooks/global/useVueRouter'
+let useVantExample = function () {
   /*
    * 通知弹框
    * message：通知的内容
    * type：通知类型
    * duration：通知显示时长（ms）
    * */
-  const vantToastMixin = (message, type, duration) => {
+  const vantToast = (message, type, duration) => {
     type = type || 'success'
     Toast({
       type: type,
@@ -17,23 +18,23 @@ let hooksFunc = function () {
       overlay: false
     })
   }
-  const vantToastNoneMixin = (msg) => {
+  const vantToastNone = (msg) => {
     Toast(msg)
   }
   /*
    * loading加载框
    * */
-  let loadingIdMixin = ref(null)
-  const vantLoadingMixin = () => {
-    loadingIdMixin.value = Toast.loading({
+  let loadingId = ref(null)
+  const vantLoading = () => {
+    loadingId.value = Toast.loading({
       message: '加载中',
       forbidClick: true,
       loadingType: 'spinner'
     })
   }
-  const vantCloseLoadingMixin = () => {
-    if (loadingIdMixin.value) {
-      loadingIdMixin.value.clear
+  const vantCloseLoading = () => {
+    if (loadingId.value) {
+      loadingId.value.clear
     }
   }
   /*
@@ -42,7 +43,7 @@ let hooksFunc = function () {
   * message:提示的内容
   * return Promise
   * */
-  const vantConfirmNoCancelBtnMixin = (title, message) => {
+  const vantConfirmNoCancelBtn = (title, message) => {
     return new Promise((resolve, reject) => {
       Dialog.confirm({
         title: title || '确认框',
@@ -62,7 +63,7 @@ let hooksFunc = function () {
    * message:提示的内容
    * return Promise
    * */
-  const vantAlterMixin = (title, message) => {
+  const vantAlter = (title, message) => {
     return new Promise((resolve, reject) => {
       Dialog.alert({
         title: title || '确认框',
@@ -78,11 +79,13 @@ let hooksFunc = function () {
     })
   }
   return {
-    vantToastMixin,
-    vantToastNoneMixin,
-    vantLoadingMixin,
-    vantConfirmNoCancelBtnMixin,
-    vantAlterMixin
+    vantToast,
+    vantToastNone,
+    vantLoading,
+    vantConfirmNoCancelBtn,
+    vantAlter
   }
 }
-export default hooksFunc()
+
+export const useVant = useVantExample
+export default useVantExample

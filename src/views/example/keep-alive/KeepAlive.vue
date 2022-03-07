@@ -36,8 +36,6 @@ export default {
 </script>
 
 <script setup>
-import { onActivated, onDeactivated, ref } from 'vue'
-import useRouter from '@/hooks/useRouter'
 onActivated(() => {
   console.log('onActivated')
 })
@@ -45,7 +43,7 @@ onDeactivated(() => {
   console.log('onDeactivated')
 })
 const routerDemoF = () => {
-  useRouter.routerPushMixin('routerDemoF', { name: 'routerDemoF' })
+  useVueRouter().routerPush('routerDemoF', { name: 'routerDemoF' })
 }
 
 const username = ref('')

@@ -9,16 +9,15 @@
     />
     <van-button type="primary" size="small" @click="routerDemoS">to routerDemoS.vue</van-button>
     <div>
-      <van-button type="primary" size="small" @click="useRouter.routerBackMixin">返回</van-button>
+      <van-button type="primary" size="small" @click="$useVueRouter.routerBack">返回</van-button>
     </div>
   </div>
 </template>
 <script setup>
-import useRouter from '@/hooks/useRouter'
-import useCommon from '@/hooks/useCommon'
-console.log(useCommon.state.todayTimeMixin)
+console.log(useCommon().todayTimeMixin)
+const $useVueRouter = useVueRouter()
 const routerDemoS = () => {
-  useRouter.routerPushMixin('routerDemoS', { name: 'routerDemoS' })
+  $useVueRouter.routerPush('routerDemoS', { name: 'routerDemoS' })
 }
 </script>
 

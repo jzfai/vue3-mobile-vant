@@ -21,8 +21,8 @@ import store from './store'
 app.use(store)
 
 //import axios req
-import axiosReq from '@/utils/axiosReq'
-app.config.globalProperties.$axiosReq = axiosReq
+// import axiosReq from '@/utils/axiosReq'
+// app.config.globalProperties.$axiosReq = axiosReq
 
 // global mixin not recommend to use , change to hooks
 // import commonMixin from '@/mixins/commonMixin'
@@ -39,8 +39,8 @@ import svgIcon from '@/icons/SvgIcon.vue'
 app.component('SvgIcon', svgIcon)
 
 //global mount moment-mini
-import $momentMini from 'moment-mini'
-app.config.globalProperties.$momentMini = $momentMini
+// import $momentMini from 'moment-mini'
+// app.config.globalProperties.$momentMini = $momentMini
 
 //import global directive
 import directive from '@/directive'

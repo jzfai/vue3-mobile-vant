@@ -4,7 +4,7 @@
 
 > vue3 mobile vant  provides enterprise-level mobile development demo
 
-A new  generation  mobile  construct   using  vue3(setup-script)+vite2+vant3 ，It's easy and  fast!
+A new  generation  mobile  construct   using  vue3(setup-script)+vite2+vant3 ，It's easy and fast!
 
 Use eslint+prettier+gitHooks format and verification code to improve code standardization and development efficiency
 

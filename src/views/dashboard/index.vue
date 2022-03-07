@@ -47,12 +47,13 @@ const reset = () => {
   countDown.value.reset()
 }
 import { Toast } from 'vant'
+import { useVueRouter } from '@/hooks/global/useVueRouter'
 const onFinish = () => Toast('倒计时结束')
-import useRouter from '@/hooks/useRouter'
+// import useRouter from '@/hooks/useRouter'
 
 //ToExample
 const ToExample = () => {
-  useRouter.routerPushMixin('Example')
+  useVueRouter().routerPush('Example')
 }
 </script>
 

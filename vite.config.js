@@ -4,6 +4,11 @@ import legacy from '@vitejs/plugin-legacy'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import viteSvgIcons from 'vite-plugin-svg-icons'
 
+//setup name
+import VueSetupExtend from 'vite-plugin-vue-setup-extend'
+//auto import vue https://www.npmjs.com/package/unplugin-auto-import
+import AutoImport from 'unplugin-auto-import/vite'
+
 //mock
 import { viteMockServe } from 'vite-plugin-mock'
 import setting from './src/settings'
@@ -75,13 +80,35 @@ export default ({ command, mode }) => {
           setupProdMockServer();
         `,
         logger: true
+      }),
+      VueSetupExtend(),
+      //https://github.com/antfu/unplugin-auto-import/blob/HEAD/src/types.ts
+      AutoImport({
+        // resolvers: [ElementPlusResolver()],
+        imports: [
+          'vue',
+          'vuex',
+          'vue-router',
+          {
+            '@/hooks/global/useCommon': ['useCommon'],
+            '@/hooks/global/useVant': ['useVant'],
+            '@/hooks/global/useVueRouter': ['useVueRouter'],
+            '@/utils/axiosReq': ['axiosReq']
+          }
+        ],
+        eslintrc: {
+          enabled: true, // Default `false`
+          filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+          globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+        },
+        dts: true //auto generation auto-imports.d.ts file
       })
     ],
     build: {
-      // minify: 'esnext', //默认modules
+      minify: 'terser', //默认modules
       brotliSize: false,
       // 消除打包大小超过500kb警告
-      chunkSizeWarningLimit: 2000,
+      chunkSizeWarningLimit: 5000,
       //remote console.log in prod
       terserOptions: {
         //detail to look https://terser.org/docs/api-reference#compress-options
@@ -109,6 +136,21 @@ export default ({ command, mode }) => {
       // extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.vue', '.mjs']
     },
     css: {
+      // postcss: {
+      //   //remove build charset warning
+      //   plugins: [
+      //     {
+      //       postcssPlugin: 'internal:charset-removal',
+      //       AtRule: {
+      //         charset: (atRule) => {
+      //           if (atRule.name === 'charset') {
+      //             atRule.remove()
+      //           }
+      //         }
+      //       }
+      //     }
+      //   ]
+      // },
       preprocessorOptions: {
         //define global scss variable
         scss: {

@@ -16,41 +16,37 @@
 </template>
 
 <script setup>
-import { onMounted, watch, ref, toRefs, reactive, computed } from 'vue'
-import axiosReq from '@/utils/axiosReq'
-import useVant from '@/hooks/useVant'
-import useRouter from '@/hooks/useRouter'
-
 const testReq = () => {
   let reqConfig = {
-    url: '/ty-user/user/loginOut',
+    url: '/integration-front/user/loginOut',
     method: 'post',
     bfLoading: false,
     isAlertErrorMsg: false
   }
   axiosReq(reqConfig).then((res) => {
-    useVant.vantToastNoneMixin('req success')
+    useVant().vantToastNone('req success')
   })
 }
 
 //mock
+const $router = useVueRouter()
 const mockRelative = () => {
-  useRouter.routerPushMixin('MockTest')
+  $router.routerPush('MockTest')
 }
 
 //VuexUse
 const VuexUse = () => {
-  useRouter.routerPushMixin('VuexUse')
+  $router.routerPush('VuexUse')
 }
 
 //SvgIcon
 const SvgIcon = () => {
-  useRouter.routerPushMixin('SvgIcon')
+  $router.routerPush('SvgIcon')
 }
 
 //KeepAlive
 const KeepAlive = () => {
-  useRouter.routerPushMixin('KeepAlive')
+  $router.routerPush('KeepAlive')
 }
 </script>
 

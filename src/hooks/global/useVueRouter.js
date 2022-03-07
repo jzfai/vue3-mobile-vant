@@ -1,14 +1,13 @@
-import { reactive, toRefs } from 'vue'
 import router from '@/router'
-let hooksFunc = function () {
+const useVueRouterExample = function () {
   const route = router.currentRoute
   const getQueryParam = () => {
-    if (route.value.query.params) {
+    if (route.value?.query.params) {
       return JSON.parse(route.value.query.params)
     }
   }
   // vue router
-  const routerPushMixin = (name, params) => {
+  const routerPush = (name, params) => {
     let data = {}
     if (params) {
       data = {
@@ -22,7 +21,7 @@ let hooksFunc = function () {
       query: data
     })
   }
-  const routerReplaceMixin = (name, params) => {
+  const routerReplace = (name, params) => {
     let data = {}
     if (params) {
       data = {
@@ -36,16 +35,17 @@ let hooksFunc = function () {
       query: data
     })
   }
-  const routerBackMixin = () => {
+  const routerBack = () => {
     router.go(-1)
   }
   return {
-    routerPushMixin,
-    routerReplaceMixin,
-    routerBackMixin,
+    routerPush,
+    routerReplace,
+    routerBack,
     getQueryParam
   }
 }
-
 // hooksFunc() not direct use the  mounted , but hooksFunc can use
-export default hooksFunc()
+// export default hooksFunc()
+export const useVueRouter = useVueRouterExample
+export default useVueRouterExample
