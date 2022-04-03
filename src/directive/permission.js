@@ -1,7 +1,10 @@
-import store from '@/store'
+
+
 
 function checkPermission(el, binding) {
   const { value } = binding
+  useA
+  
   const roles = store.state.user.roles
 
   if (value && value instanceof Array) {

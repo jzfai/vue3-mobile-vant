@@ -16,9 +16,9 @@ app.use(Vant)
 app.use(router)
 import router from './router'
 
-//import vuex
-import store from './store'
-app.use(store)
+//import vuex5
+import { createPinia } from 'pinia'
+app.use(createPinia())
 
 //import axios req
 // import axiosReq from '@/utils/axiosReq'
@@ -43,8 +43,8 @@ app.component('SvgIcon', svgIcon)
 // app.config.globalProperties.$momentMini = $momentMini
 
 //import global directive
-import directive from '@/directive'
-directive(app)
+// import directive from '@/directive'
+// directive(app)
 
 // global css
 import '@/styles/index.scss'

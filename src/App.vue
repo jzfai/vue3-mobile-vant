@@ -9,10 +9,10 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { useStore } from 'vuex'
-let store = useStore()
+import { useAppStore } from '@/store/app'
 let route = useRoute()
 
+const appStore = useAppStore
 // cachePage: is true, keep-alive this Page
 // leaveRmCachePage: is true, keep-alive remote when page leave
 let oldRoute = null
@@ -25,12 +25,12 @@ const key = computed({
 
     if (oldRoute?.name) {
       if (oldRoute.meta?.leaveRmCachePage && oldRoute.meta?.cachePage) {
-        store.commit('app/M_DEL_CACHED_VIEW', oldRoute.name)
+        appStore.M_DEL_CACHED_VIEW(oldRoute.name)
       }
     }
     if (route.name) {
       if (route.meta?.cachePage) {
-        store.commit('app/M_ADD_CACHED_VIEW', route.name)
+        appStore.M_ADD_CACHED_VIEW(route.name)
       }
     }
     oldRoute = JSON.parse(JSON.stringify({ name: route.name, meta: route.meta }))
@@ -39,7 +39,7 @@ const key = computed({
 })
 
 const cachedViews = computed(() => {
-  return store.state.app.cachedViews
+  return appStore.cachedViews
 })
 </script>
 

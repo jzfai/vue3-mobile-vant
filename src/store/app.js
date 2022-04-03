@@ -1,11 +1,14 @@
 import defaultSettings from '@/settings'
-const state = {
-  settings: defaultSettings,
-  cachedViews: [],
-  test: false
-}
-/*mutations建议以M_开头*/
-const mutations = {
+import { defineStore } from 'pinia'
+export const useAppStore = defineStore('app', {
+  state: () => {
+    return {
+      settings: defaultSettings,
+      cachedViews: [],
+      test: false
+    }
+  },
+
   M_vuex_test: (state, data) => {
     state.test = data
   },
@@ -20,17 +23,8 @@ const mutations = {
   },
   M_RESET_CACHED_VIEW: (state) => {
     state.cachedViews = []
-  }
-}
-const actions = {
+  },
   A_vuex_test({ commit }, data) {
     commit('M_vuex_test', data)
   }
-}
-
-export default {
-  namespaced: true,
-  state,
-  mutations,
-  actions
-}
+})
