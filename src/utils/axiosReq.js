@@ -1,4 +1,3 @@
-import store from '@/store'
 import axios from 'axios'
 import { Toast } from 'vant'
 import { getToken, setToken } from '@/utils/auth'

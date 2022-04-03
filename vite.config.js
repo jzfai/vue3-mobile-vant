@@ -9,6 +9,8 @@ import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 //auto import vue https://www.npmjs.com/package/unplugin-auto-import
 import AutoImport from 'unplugin-auto-import/vite'
 
+//inject title
+import { createHtmlPlugin } from 'vite-plugin-html'
 //mock
 import { viteMockServe } from 'vite-plugin-mock'
 import setting from './src/settings'
@@ -56,6 +58,11 @@ export default ({ command, mode }) => {
       //   }
       // }
     },
+    preview: {
+      port: 5010,
+      host: '0.0.0.0',
+      strictPort: true
+    },
     plugins: [
       vue(),
       vueJsx(),
@@ -102,6 +109,14 @@ export default ({ command, mode }) => {
           globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
         },
         dts: true //auto generation auto-imports.d.ts file
+      }),
+      createHtmlPlugin({
+        inject: {
+          // Inject data into ejs template
+          data: {
+            title: setting.title
+          }
+        }
       })
     ],
     build: {
