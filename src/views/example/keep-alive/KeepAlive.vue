@@ -29,13 +29,15 @@
 1.设置name（必须）
 2.在路由配置处设置cachePage：即可缓存
 -->
-<script>
+<script lang="ts">
 export default {
   name: 'KeepAlive'
 }
 </script>
 
-<script setup>
+<script setup lang="ts">
+import { onActivated, onDeactivated, ref } from 'vue'
+import useRouter from '@/hooks/useRouter'
 onActivated(() => {
   console.log('onActivated')
 })
@@ -43,12 +45,12 @@ onDeactivated(() => {
   console.log('onDeactivated')
 })
 const routerDemoF = () => {
-  useVueRouter().routerPush('routerDemoF', { name: 'routerDemoF' })
+  useRouter.routerPushMixin('routerDemoF', { name: 'routerDemoF' })
 }
 
 const username = ref('')
 const password = ref('')
-const onSubmit = (values) => {
+const onSubmit = (values: any) => {
   console.log('submit', values)
 }
 </script>

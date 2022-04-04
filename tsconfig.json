@@ -6,7 +6,7 @@
     //启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict， --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
     "strict": true,
     // 允许编译器编译JS，JSX文件
-    "allowJs": true,
+    "allowJs": false,
     // 允许在JS文件中报错，通常与allowJS一起使用
     "checkJs": false,
     // 允许使用jsx
@@ -15,7 +15,7 @@
     //移除注解
     "removeComments": true,
     //不可以忽略any
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     //关闭 this 类型注解提示
     "noImplicitThis": true,
     //null/undefined不能作为其他类型的子类型：
@@ -51,7 +51,7 @@
   },
   //"files": [],
   //include包含文件夹会被ts进行读取
-  "include": ["src", "typings", "auto-imports.d.ts"]
+  "include": ["src", "typings"]
   //exclude 可以去除include中指定的文件，不能去除file指定的文件
   //  "exclude": [
   ////    "src/src1.ts"

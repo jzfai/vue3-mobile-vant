@@ -12,7 +12,7 @@ import { useRoute } from 'vue-router'
 import { useAppStore } from '@/store/app'
 let route = useRoute()
 
-const appStore = useAppStore
+const appStore = useAppStore()
 // cachePage: is true, keep-alive this Page
 // leaveRmCachePage: is true, keep-alive remote when page leave
 let oldRoute = null

@@ -31,7 +31,7 @@
   <van-button type="primary" size="small" @click="ToExample">ToExample</van-button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, watch, ref, toRefs, reactive, computed } from 'vue'
 const time = ref(30 * 60 * 60 * 1000)
 
@@ -47,13 +47,12 @@ const reset = () => {
   countDown.value.reset()
 }
 import { Toast } from 'vant'
-import { useVueRouter } from '@/hooks/global/useVueRouter'
 const onFinish = () => Toast('倒计时结束')
-// import useRouter from '@/hooks/useRouter'
+import useRouter from '@/hooks/useRouter'
 
 //ToExample
 const ToExample = () => {
-  useVueRouter().routerPush('Example')
+  useRouter.routerPushMixin('Example')
 }
 </script>
 

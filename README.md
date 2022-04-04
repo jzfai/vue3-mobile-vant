@@ -4,11 +4,11 @@
 
 > vue3 mobile vant  provides enterprise-level mobile development demo
 
-A new  generation  mobile  construct   using  vue3(setup-script)+vite2+vant3 ，It's easy and fast!
+A new  generation  mobile  construct   using  vue3(setup-script)+vite2+vant3 ，It's easy and  fast!
 
 Use eslint+prettier+gitHooks format and verification code to improve code standardization and development efficiency
 
->the rem flexible,  vant  ui according to 375, but developing is 750 , detail to look the "postcss.config.js"
+>the rem flexible,  vant ui according to 375, but developing is 750 , detail to look the "postcss.config.js"
 
 ## Update log
 
@@ -39,8 +39,7 @@ github 地址：  https://github.com/jzfai/vue3-mobile-vant.git
 ## Related items
 
 The framework is available in js, ts versions
-- js version：[vue3-mobile-vant](https://github.com/jzfai/vue3-mobile-vant.git)
-- ts version：[vue3-mobile-vant-ts](https://github.com/jzfai/vue3-admin-vant-ts.git)
+- ts version：[vue3-mobile-vant](https://github.com/jzfai/vue3-mobile-vant.git)
 - js version for pc admin：[vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
 - java Micro-service background data：[micro-service-plus](https://github.com/jzfai/micro-service-plus)
 > development and  experience：two words  Really fragrant！！！！！
@@ -95,12 +94,7 @@ Architecture development is not easy. If you feel good, please give me a **start
 ## Browsers support
 
 Note: Vue3 is not supported the Internet Explorer
-
-Modern browsers and Internet Explorer 11+.
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-|Edge| last 2 versions| last 2 versions| last 2 versions
+Vant 3/4 support for  Chrome >= 51、iOS >= 10.0（与 Vue 3 一致）。
 
 ## Discussion and Communication
 [WeChat group](http://8.135.1.141/file/images/wx-groud.png)

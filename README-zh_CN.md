@@ -6,8 +6,7 @@
 
 > vue3 mobile vant 提供企业级的移动端开发架构
 
-
-本架构使用的技术为：vue3(setup-script)+vite2+vant3 的新一代的前端框架，It's fast!
+本架构使用的技术为：vue3(setup-script)+vite2+vant3 的新一代的前端框架，It's easy and fast!
 
 使用 eslint+prettier+gitHooks 格式和校验代码,提高代码规范性和开发效率
 
@@ -37,7 +36,7 @@ github 地址：  https://github.com/jzfai/vue3-mobile-vant.git
 
 ## 例子
 
- ---- 我们先看看加载速度和构建后的包大小：
+---- 我们先看看加载速度和构建后的包大小：
 
 ![template-speed-analysis](http://8.135.1.141/file/images/vant-speed-analysis.png)
 
@@ -70,6 +69,7 @@ pnpm run dev
 ```
 
 浏览器访问 http://localhost:5006
+
 
 ## 发布
 
@@ -104,9 +104,7 @@ pnpm run lint
 注意：vue3不在支持IE浏览器
 Modern browsers and Internet Explorer 11+.
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-|Edge| last 2 versions| last 2 versions| last 2 versions
+Vant 3/4 support for  Chrome >= 51、iOS >= 10.0（与 Vue 3 一致）。
 
 ## 讨论和交流(含vue3+ts视频教程)
 [WeChat group](http://8.135.1.141/file/images/wx-groud.png)

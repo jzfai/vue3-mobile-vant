@@ -18,13 +18,7 @@ module.exports = {
     defineExpose: true
   },
   plugins: ['@typescript-eslint', 'prettier', 'import'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:vue/vue3-recommended',
-    'prettier',
-    './.eslintrc-auto-import.json'
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:vue/vue3-recommended', 'prettier'],
   parserOptions: {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',

@@ -2,7 +2,7 @@
   <div>vue3推荐模板可以集成在你们的vscode或webstorm中，有助于快速开发</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 //import { onMounted, getCurrentInstance, watch, ref, toRefs, reactive, computed } from 'vue'
 //获取store和router
 // import {useRouter} from 'vue-router'

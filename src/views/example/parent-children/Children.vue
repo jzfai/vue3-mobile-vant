@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { getCurrentInstance, onMounted, reactive, ref, toRefs } from 'vue'
 const props = defineProps({
   fatherName: {
@@ -24,7 +24,7 @@ let childMethod = () => {
   return 'childMethod'
 }
 
-const { proxy } = getCurrentInstance()
+const { proxy }: any = getCurrentInstance()
 let getFatherMethod = () => {
   proxy.$parent.fartherMethod()
 }

@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 //script-setup vue官方说明
 //https://v3.cn.vuejs.org/api/sfc-script-setup.html#使用组件
 import { onMounted, getCurrentInstance, ref } from 'vue'
@@ -14,9 +14,9 @@ import Children from './Children.vue'
 //获取store和router
 // import {useRouter} from 'vue-router'
 // import {useStore} from 'vuex'
-let { proxy } = getCurrentInstance()
+let { proxy }: any = getCurrentInstance()
 
-let refChildren = ref(null)
+const refChildren: any = ref(null)
 onMounted(() => {
   /*获取子元素两种方法*/
   //第一种
@@ -28,7 +28,7 @@ const childMethod = () => {
   console.log(refChildren.value.childMethod())
   console.log(refChildren.value.childRef)
 }
-const emitParent = (data) => {
+const emitParent = (data: any) => {
   console.log('得到子组件的信息111', data)
 }
 const fartherMethod = () => {

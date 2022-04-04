@@ -1,11 +1,11 @@
 <template>
   <div class="mockTest">
     <div>mock 使用示例(dev环境时使用)</div>
-    <van-button @click="listReq" type="primary">点击发送mock请求</van-button>
+    <van-button type="primary" @click="listReq">点击发送mock请求</van-button>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // mock address https://blog.csdn.net/weixin_42067720/article/details/115579817
 // import '@/mock/index.js'
 import axios from 'axios'

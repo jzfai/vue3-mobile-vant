@@ -15,38 +15,42 @@
   <van-button type="primary" size="small" @click="KeepAlive">KeepAlive</van-button>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { onMounted, watch, ref, toRefs, reactive, computed } from 'vue'
+import axiosReq from '@/utils/axiosReq'
+import useVant from '@/hooks/useVant'
+import useRouter from '@/hooks/useRouter'
+
 const testReq = () => {
   let reqConfig = {
-    url: '/integration-front/user/loginOut',
+    url: '/ty-user/user/loginOut',
     method: 'post',
     bfLoading: false,
     isAlertErrorMsg: false
   }
-  axiosReq(reqConfig).then((res) => {
-    useVant().vantToastNone('req success')
+  axiosReq(reqConfig).then((res: any) => {
+    useVant.vantToastNoneMixin('req success')
   })
 }
 
 //mock
-const $router = useVueRouter()
 const mockRelative = () => {
-  $router.routerPush('MockTest')
+  useRouter.routerPushMixin('MockTest')
 }
 
 //VuexUse
 const VuexUse = () => {
-  $router.routerPush('VuexUse')
+  useRouter.routerPushMixin('VuexUse')
 }
 
 //SvgIcon
 const SvgIcon = () => {
-  $router.routerPush('SvgIcon')
+  useRouter.routerPushMixin('SvgIcon')
 }
 
 //KeepAlive
 const KeepAlive = () => {
-  $router.routerPush('KeepAlive')
+  useRouter.routerPushMixin('KeepAlive')
 }
 </script>
 
