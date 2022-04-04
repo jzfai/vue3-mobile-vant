@@ -94,7 +94,6 @@ export default ({ command }) => {
         // resolvers: [ElementPlusResolver()],
         imports: [
           'vue',
-          'vuex',
           'vue-router',
           {
             '@/hooks/global/useCommon': ['useCommon'],

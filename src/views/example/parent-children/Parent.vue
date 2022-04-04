@@ -9,11 +9,8 @@
 <script setup lang="ts">
 //script-setup vue官方说明
 //https://v3.cn.vuejs.org/api/sfc-script-setup.html#使用组件
-import { onMounted, getCurrentInstance, ref } from 'vue'
 import Children from './Children.vue'
 //获取store和router
-// import {useRouter} from 'vue-router'
-// import {useStore} from 'vuex'
 let { proxy }: any = getCurrentInstance()
 
 const refChildren: any = ref(null)
