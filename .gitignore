@@ -8,3 +8,4 @@ dist-ssr
 yarn*
 pnpm*
 npm*
+ts-out-dir
