@@ -1,7 +1,8 @@
 const setting = {
+    title: 'vue3-mobile-vant',
     openProdMock: true,
     errorLog: ['prod'],
     tmpToken: 'tmp_token',
-    viteBasePath: '/vue3-mobile-vant-ts/'
+    viteBasePath: './'
 };
 export default setting;

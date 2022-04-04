@@ -1,5 +1,5 @@
 const setting = {
-  title: 'vue3-mobile-vant-ts',
+  title: 'vue3-mobile-vant',
   /**
    * @type {boolean} true | false
    * @description Whether  open prod mock
@@ -21,7 +21,7 @@ const setting = {
    * vite.config.js base config
    * such as
    * */
-  viteBasePath: '/vue3-mobile-vant-ts/'
+  viteBasePath: './'
 }
 
 export default setting

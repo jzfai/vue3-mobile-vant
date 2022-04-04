@@ -1,7 +1,7 @@
 <template>
   <div class="scroll-y">
     <div>这是父组件</div>
-    <Children ref="refChildren" father-name="Vue3Template" @emitParent="emitParent" />
+    <Children ref="refChildren" father-name="Vue3Template" @emit-parent="emitParent" />
     <van-button @click="childMethod">childMethod</van-button>
   </div>
 </template>

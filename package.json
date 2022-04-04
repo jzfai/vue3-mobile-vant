@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "axios": "0.21.3",
+    "axios": "0.26.1",
     "moment-mini": "2.22.1",
     "mitt": "3.0.0",
     "vant": "3.4.7",
